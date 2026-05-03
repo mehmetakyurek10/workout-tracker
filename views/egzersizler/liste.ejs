@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egzersizler</title>
+</head>
+
+<body>
+    <% egzersizler.forEach(data=> { %>
+        <div>
+            <h1>
+                <%= data.isim%>
+            </h1>
+            <h3>Kas Grubu: <%= data.kas_grubu%>
+            </h3>
+            <p>
+                Ekipman: <%= data.ekipman%>
+            </p>
+            <p>
+                Açıklama: <%= data.aciklama%>
+            </p>
+        </div>
+        <% }) %>
+</body>
+
+</html>
