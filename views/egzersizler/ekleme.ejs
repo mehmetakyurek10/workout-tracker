@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egzersizler - Ekleme</title>
+</head>
+
+<body>
+    <form action="/egzersizler/ekle" method="POST">
+        <input name="isim" placeholder="Egzersiz İsmi giriniz" required>
+        <select name="kas_grubu">
+            <option value="gogus">Göğüs</option>
+            <option value="bacak">Bacak</option>
+            <option value="sirt">Sırt</option>
+            <option value="omuz">Omuz</option>
+            <option value="kol">Kol</option>
+        </select>
+
+        <select name="ekipman">
+            <option value="barbell">Barbell</option>
+            <option value="vucut_agirligi">Vücut Ağırlığı</option>
+            <option value="dumbell">Dumbell</option>
+        </select>
+
+        <textarea name="aciklama" placeholder="Açıklma Giriniz:" required></textarea>
+        <button type="submit">Kaydet</button>
+    </form>
+</body>
+
+</html>
