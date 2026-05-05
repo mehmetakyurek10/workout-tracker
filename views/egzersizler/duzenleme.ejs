@@ -1,0 +1,24 @@
+<%- include("../partials/head.ejs",{title: "Egzersiz Düzenleme" }) %>
+
+    <h2>Düzenelem Sayfası</h2>
+    <div>
+        <form action="/egzersizler/edit/<%= egzersiz.id %>" method="POST">
+            <input name="isim" value="<%= egzersiz.isim%>">
+            <select name="kas_grubu">
+                <option value="gogus" <%=egzersiz.kas_grubu==="gogus" ? "selected" : "" %>>Göğüs</option>
+                <option value="bacak" <%=egzersiz.kas_grubu==="bacak" ? "selected" : "" %>>Bacak</option>
+                <option value="sirt" <%=egzersiz.kas_grubu==="sirt" ? "selected" : "" %>>Sırt</option>
+                <option value="omuz" <%=egzersiz.kas_grubu==="omuz" ? "selected" : "" %>>Omuz</option>
+                <option value="kol" <%=egzersiz.kas_grubu==="kol" ? "selected" : "" %>>Kol</option>
+            </select>
+            <select name="ekipman">
+                <option value="barbell" <%=egzersiz.ekipman==="barbell" ? "selected" : "" %>>Barbell</option>
+                <option value="vucut_agirligi" <%=egzersiz.ekipman==="vucut_agirligi" ? "selected" : "" %>>Vücut
+                    Ağırlığı</option>
+                <option value="dumbell" <%=egzersiz.ekipman==="dumbell" ? "selected" : "" %>>Dumbell</option>
+            </select>
+            <textarea name="aciklama"><%= egzersiz.aciklama %></textarea>
+            <button type="submit">Kaydet</button>
+        </form>
+    </div>
+    <%- include('../partials/footer.ejs') %>

@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("../partials/head.ejs",{title: "Egzersiz Ekleme" }) %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Egzersizler - Ekleme</title>
-</head>
 
-<body>
     <form action="/egzersizler/ekle" method="POST">
         <input name="isim" placeholder="Egzersiz İsmi giriniz" required>
         <select name="kas_grubu">
@@ -27,6 +20,5 @@
         <textarea name="aciklama" placeholder="Açıklma Giriniz:" required></textarea>
         <button type="submit">Kaydet</button>
     </form>
-</body>
 
-</html>
+    <%- include('../partials/footer.ejs') %>
