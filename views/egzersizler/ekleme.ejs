@@ -1,7 +1,5 @@
 <%- include("../partials/head.ejs",{title: "Egzersiz Ekleme" }) %>
-
-
-    <form action="/egzersizler/ekle" method="POST">
+    <form action="/egzersizler/ekle" method="POST" class="egzersiz-ekle-form">
         <input name="isim" placeholder="Egzersiz İsmi giriniz" required>
         <select name="kas_grubu">
             <option value="gogus">Göğüs</option>

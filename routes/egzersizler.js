@@ -65,4 +65,18 @@ router.post("/edit/:id",async(req,res)=> {
     }
 })
 
+router.post("/sil/:id",async(req,res) => {
+    const id = req.params.id
+    try{
+        await db.execute(
+            "DELETE FROM egzersizler WHERE id=?",[id]
+        )
+        res.redirect("/egzersizler")
+    }
+    catch(err){
+        console.log(err)
+        res.status(500).send("DB Hatası")
+    }
+})
+
 module.exports = router

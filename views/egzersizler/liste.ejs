@@ -1,11 +1,13 @@
 <%- include("../partials/head.ejs",{title:"Egzersizler"}) %>
-
-
+    <h1 class="egzersizler-title">Egzersizler</h1>
+    <div class="yeni-egzersiz-div">
+        <a href="/egzersizler/ekle" class="yeni-egzersiz">Yeni Egzersiz Ekle</a>
+    </div>
     <% egzersizler.forEach(data=> { %>
-        <div>
-            <h1>
+        <div class="egzersiz-main-div">
+            <h2>
                 <%= data.isim%>
-            </h1>
+            </h2>
             <h3>Kas Grubu: <%= data.kas_grubu%>
             </h3>
             <p>
@@ -14,6 +16,13 @@
             <p>
                 Açıklama: <%= data.aciklama%>
             </p>
+            <div class="egzersiz-submit">
+                <a href="/egzersizler/edit/<%= data.id %>" class="edit-egzersiz">Egzersizi düzenle</a>
+                <form action="/egzersizler/sil/<%= data.id %>" method="POST"
+                    onsubmit="return confirm(`Bu egzersizi silmek istediğine emin misin`)">
+                    <button type="submit" class="sil-buton">Sil</button>
+                </form>
+            </div>
         </div>
         <% }) %>
 
