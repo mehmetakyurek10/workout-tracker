@@ -1,8 +1,9 @@
 <%- include("../partials/head.ejs",{title: "Egzersiz Düzenleme" }) %>
 
-    <h2>Düzenelem Sayfası</h2>
+
     <div>
-        <form action="/egzersizler/edit/<%= egzersiz.id %>" method="POST">
+        <form action="/egzersizler/edit/<%= egzersiz.id %>" method="POST" class="egzersiz-ekle-form">
+            <h2>Düzenleme Sayfası</h2>
             <input name="isim" value="<%= egzersiz.isim%>">
             <select name="kas_grubu">
                 <option value="gogus" <%=egzersiz.kas_grubu==="gogus" ? "selected" : "" %>>Göğüs</option>

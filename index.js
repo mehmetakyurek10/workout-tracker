@@ -12,7 +12,7 @@ const egzersizlerRoutes = require("./routes/egzersizler")
 app.use("/egzersizler",egzersizlerRoutes)
 
 app.get("/", (req,res) => {
-    res.send("Workout Tracker Hazır Ve Nazır")
+    res.render("ana_sayfa")
 })
 
 app.listen(PORT, () => {

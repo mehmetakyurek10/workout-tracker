@@ -1,5 +1,6 @@
 <%- include("../partials/head.ejs",{title: "Egzersiz Ekleme" }) %>
     <form action="/egzersizler/ekle" method="POST" class="egzersiz-ekle-form">
+        <h2>Egzersiz Ekle</h2>
         <input name="isim" placeholder="Egzersiz İsmi giriniz" required>
         <select name="kas_grubu">
             <option value="gogus">Göğüs</option>
@@ -18,5 +19,8 @@
         <textarea name="aciklama" placeholder="Açıklma Giriniz:" required></textarea>
         <button type="submit">Kaydet</button>
     </form>
+    <div class="egzersiz-ekle-undo">
+        <a href="/"><button>Ana Sayfaya Git</button></a>
+    </div>
 
     <%- include('../partials/footer.ejs') %>
